@@ -8,15 +8,15 @@ import styles from "../styles/History.module.css";
 import { removeFromHistory } from "@/lib/userData";
 
 export default function History() {
+	// get data from searchHistory
+	const [searchHistory, setSearchHistory] = useAtom(searchHistoryAtom);
+
 	// define router
 	const router = useRouter();
 
 	if (!searchHistory) {
 		return null;
 	}
-
-	// get data from searchHistory
-	const [searchHistory, setSearchHistory] = useAtom(searchHistoryAtom);
 
 	let parsedHistory = [];
 	searchHistory.forEach((h) => {
