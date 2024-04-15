@@ -4,6 +4,7 @@ import Error from "next/error";
 import { useAtom } from "jotai";
 import { useState } from "react";
 import { favouritesAtom } from "@/store";
+import { useEffect } from "react";
 import { Button } from "react-bootstrap";
 import { addToFavourites, removeFromFavourites } from "@/lib/userData";
 
